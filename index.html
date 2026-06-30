@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soha Burgers | Order Online</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader-wrapper">
+  <div class="loader"></div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="navbar">
+
+   <div class="logo">
+
+    <img src="images/logo.png" alt="SOHA Burgers Logo">
+
+    <div class="SOHA BURGERS">
+
+        <h2>SOHA BURGERS</h2>
+
+        <span>Fresh Burgers • Fresh Moments</span>
+
+    </div>
+
+</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="cart-icon">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cartBadge">0</span>
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-left fade-up">
+    <h3>WELCOME TO SOHA BURGERS</h3>
+    <h1>Fresh Burgers</h1>
+    <p>Affordable burgers, Crispy fries and Warps — order online and get it delivered hot to your door.</p>
+    <a href="#menu" class="order-btn">Order Now</a>
+  </div>
+  <div class="hero-right fade-right">
+    <img src="images/hero-burger.jpg" alt="Soha Burgers signature burger">
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <h2 class="section-title text-center mb-40">Our Menu</h2>
+
+  <input type="text" class="search" placeholder="Search burgers, fries, drinks...">
+
+  <div class="categories">
+
+
+<button class="active">
+All
+</button>
+
+
+<button>
+Burgers
+</button>
+
+
+<button>
+Wraps
+</button>
+
+
+<button>
+Sides
+</button>
+
+
+<button>
+Burger Doubles
+</button>
+
+
+<button>
+Loaded Fries
+</button>
+
+
+<button>
+Chicken Strips
+</button>
+
+
+<button>
+Crispy Chicken Wings
+</button>
+
+
+<button>
+Cool Meals
+</button>
+
+
+<button>
+Combos
+</button>
+
+
+<button>
+Dips
+</button>
+
+
+</div>
+
+
+  <div id="menuContainer">
+    <!-- products injected by script.js -->
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers">
+
+    <h2 class="section-title text-center mb-40">
+        🔥 Hot Offers
+    </h2>
+
+    <div class="offers-grid">
+
+        <div class="offer-card">
+
+            <div class="offer-top">
+                MOST POPULAR
+            </div>
+
+            <h3>₹100 OFF</h3>
+
+            <h4>SOHA100</h4>
+
+            <p>Flat ₹100 OFF on your first order.</p>
+
+            <button class="copy-offer"
+                onclick="navigator.clipboard.writeText('SOHA100');showToast('Coupon Copied!')">
+
+                Copy Coupon
+
+            </button>
+
+        </div>
+
+        <div class="offer-card">
+
+            <h3>₹50 OFF</h3>
+
+            <h4>WELCOME50</h4>
+
+            <p>₹50 OFF on your first order.</p>
+
+            <button class="copy-offer"
+                onclick="navigator.clipboard.writeText('WELCOME50');showToast('Coupon Copied!')">
+
+                Copy Coupon
+
+            </button>
+
+        </div>
+
+        <div class="offer-card">
+
+            <h3>FREE DELIVERY</h3>
+
+            <h4>Above ₹499</h4>
+
+            <p>Enjoy FREE delivery on every order above ₹499.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="section-title text-center mb-40">
+        Contact Us
+    </h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Visit Us</h3>
+
+            <p>
+                Okhla<br>
+                New Delhi
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <h3>Call Us</h3>
+
+            <p>
+                +91 88266 52060
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Opening Hours</h3>
+
+            <p>
+                Everyday<br>
+                06:00 PM – 04:00 AM
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CART DRAWER -->
+<div id="cartDrawer">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <span id="closeCart"><i class="fa-solid fa-xmark"></i></span>
+  </div>
+
+  <div id="cartItems">
+    <!-- cart items injected by script.js -->
+  </div>
+
+  <div class="cart-footer">
+    <div class="price-row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+    <div class="price-row"><span>GST (5%)</span><span id="gst">₹0</span></div>
+    <div class="price-row"><span>Delivery</span><span id="delivery">₹0</span></div>
+    <div class="price-row"><span>Discount</span><span id="discount">-₹0</span></div>
+    <div class="price-row grand-total"><span>Grand Total</span><span id="grandTotal">₹0</span></div>
+
+    <input type="text" id="coupon" placeholder="Coupon code">
+    <button class="apply-btn">Apply Coupon</button>
+
+    <button id="checkout">Checkout (₹<span id="cartTotal">0</span>)</button>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="checkout-modal">
+  <div class="checkout-box">
+    <h2>Delivery Details</h2>
+    <input type="text" id="customerName" placeholder="Full Name">
+    <input type="tel" id="customerPhone" placeholder="Phone Number">
+    <input type="text" id="customerAddress" placeholder="Delivery Address">
+    <textarea id="customerNote" placeholder="Any special instructions? (optional)"></textarea>
+    <button class="place-order">Place Order via WhatsApp</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <h2>SOHA BURGERS</h2>
+      <p>Fresh ingredients, bold flavours, delivered fast.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Get In Touch</h3>
+      <p><i class="fa-solid fa-location-dot"></i> Okhla, New Delhi</p>
+      <p><i class="fa-solid fa-phone"></i> +91 88266 52060</p>
+      <p><i class="fa-solid fa-envelope"></i> sohaburgers@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © <span id="year"></span> Soha Burgers. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/918826652060" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<button id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
